@@ -3,9 +3,9 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 
 // Define a User interface representing the user object structure
 interface User {
-  id: ...;
-  name: ..;
-  email: ..;
+  id: string;
+  name: string;
+  email: string;
 }
 
 // Define the shape of the AuthContext
@@ -41,7 +41,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState(true); // Loading state
   const [error, setError] = useState<string | null>(null); // Error message state
 
-  const API_BASE = 'http://localhost:5000/api'; // Base URL of your backend API
+  const API_BASE = 'http://localhost:5050/api'; // Base URL of your backend API
 
   // Check for existing token in localStorage on first render
   useEffect(() => {

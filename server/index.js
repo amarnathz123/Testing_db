@@ -35,7 +35,7 @@ const connectDB = async () => {
   try {
     const client = new MongoClient(MONGODB_URI); // connect using URI
     await client.connect(); // wait until it connects
-    db = client.db('.......'); // use or create database called 'loginapp'
+    db = client.db('Login'); // use or create database called 'loginapp'
     console.log('✅ Connected to MongoDB');
   } catch (error) {
     console.error('❌ MongoDB connection error:', error);
